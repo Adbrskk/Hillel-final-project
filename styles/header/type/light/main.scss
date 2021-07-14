@@ -1,0 +1,42 @@
+&.header--light {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  .header__contacts {
+    color: $colorWhite;
+
+    svg {
+      path {
+        fill: $colorWhite;
+      }
+    }
+  }
+
+  .language {
+    display: flex;
+    margin-right: 20px;
+
+    a {
+      color: $colorWhite;
+
+      &:hover,
+      &.active {
+        color: $colorWhite;
+        background: $colorCrimson;
+      }
+    }
+  }
+
+  .header__menu {
+    a {
+      color: $colorWhite;
+    }
+  }
+
+  .hamburger {
+    span {
+      background: $colorWhite;
+    }
+  }
+}

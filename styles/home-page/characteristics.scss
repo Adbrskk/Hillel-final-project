@@ -1,0 +1,125 @@
+.characteristics {
+  padding-top: 80px;
+
+  .container {
+    display: flex;
+  }
+
+  &.characteristics--desktop {
+    .characteristics__items {
+      p {
+        margin-left: auto;
+        text-align: right;
+        padding-right: 40px;
+        cursor: pointer;
+        font-weight: 500;
+        color: $colorGrey3;
+        border-right: 4px solid $colorGrey;
+        font-size: 42px;
+        line-height: 50px;
+        width: fit-content;
+
+        &:not(:first-child),
+        &:not(:last-child) {
+          padding-top: 10px;
+          padding-bottom: 10px;
+        }
+
+        &.active,
+        &:hover {
+          @include textGradientDefaultReversed();
+        }
+
+        &.active {
+          border-color: $colorCrimson;
+        }
+      }
+    }
+
+    .characteristics__description {
+      max-width: 600px;
+      margin-left: 40px;
+      color: $colorWhite;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .description__title {
+      font-size: 32px;
+      line-height: 38px;
+      margin-bottom: 20px;
+    }
+
+    .description__text {
+      font-size: 21px;
+      line-height: 30px;
+    }
+  }
+
+  &.characteristics--mobile {
+    display: none;
+
+    .container {
+      display: block;
+    }
+
+    .characteristics__items {
+      padding-bottom: 20px;
+    }
+
+    .characteristics__item {
+      .item__title {
+        font-size: 14px;
+        line-height: 17px;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        margin-bottom: 8px;
+        @include textGradientDefaultReversed();
+      }
+
+      .item__subtitle {
+        font-size: 22px;
+        line-height: 26px;
+        color: $colorWhite;
+        margin-bottom: 12px;
+      }
+
+      .item__description {
+        font-size: 18px;
+        line-height: 26px;
+        color: $colorWhite;
+      }
+    }
+  }
+}
+
+.characteristics {
+  @media screen and (max-width: $screenLargeResolution) {
+    &.characteristics--desktop {
+      .characteristics__items {
+        p {
+          font-size: 36px;
+
+          &:not(:first-child),
+          &:not(:last-child) {
+            padding-top: 6px;
+            padding-bottom: 6px;
+          }
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: $screenMediumResolution) {
+    padding-top: 40px;
+
+    &.characteristics--desktop {
+      display: none;
+    }
+
+    &.characteristics--mobile {
+      display: block;
+    }
+  }
+}

@@ -1,0 +1,18 @@
+.container {
+  max-width: calc(#{$baseContainerWidth} + #{$containerPadding} * 2);
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 $containerPadding;
+}
+
+.container--small {
+  max-width: calc(#{$smallContainerWidth} - #{$containerPadding} * 2);
+}
+
+.container--narrow {
+  max-width: calc(#{$narrowContainerWidth} - #{$containerPadding} * 2);
+}
+
+//.container--large {
+//
+//}

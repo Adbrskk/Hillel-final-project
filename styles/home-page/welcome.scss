@@ -1,0 +1,58 @@
+.welcome {
+  background:
+          url("../../images/home-page/P-small.svg") no-repeat 50% 90% / 40%,
+          url("../../images/home-page/P-big.png") no-repeat 50% 100% / 587px 495px,
+          url("../../images/home-page/background.jpg") no-repeat center/cover;
+  height: 100vh;
+  padding-top: 56px;
+
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: 0;
+    z-index: 1;
+    width: 100%;
+    height: 200px;
+    background: linear-gradient(180deg, rgba(50, 50, 100, 0) 16.67%, #323264 100%);
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+
+  .welcome__title {
+    margin-top: 320px;
+    color: $colorWhite;
+    font-size: 38px;
+    font-weight: 500;
+    line-height: 44.85px;
+    text-align: center;
+  }
+
+  .welcome__scroll-down {
+    display: flex;
+    justify-content: center;
+    margin-top: auto;
+    margin-bottom: 36px;
+    z-index: 5;
+
+    img {
+      cursor: pointer;
+    }
+  }
+}
+
+.welcome {
+  @media screen and (max-width: $screenMediumResolution) {
+    background:
+            url("../../images/home-page/P-big.png") no-repeat 50% 100% / 487px 395px,
+            url("../../images/home-page/background.jpg") no-repeat center/cover;
+
+    .welcome__title {
+      margin-top: 30vh;
+    }
+  }
+}

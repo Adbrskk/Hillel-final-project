@@ -1,0 +1,49 @@
+.quality {
+  background: $colorWhite;
+  padding: 80px 0 92px 0;
+
+  .container {
+    display: flex;
+    justify-content: center;
+  }
+
+  .quality__description {
+    margin-right: 40px;
+    max-width: 640px;
+
+    p {
+      //font-family: TT Norms;
+      font-size: 21px;
+      line-height: 30px;
+      color: $colorBlack;
+
+      &:not(:last-child) {
+        margin-bottom: 20px;
+      }
+    }
+  }
+}
+
+.quality {
+  @media screen and (max-width: $screenMediumResolution) {
+    padding: 20px 0 40px 0;
+
+    .container {
+      display: block;
+    }
+
+    .quality__description {
+      margin: 0 0 20px 0;
+      max-width: 100%;
+    }
+  }
+
+  @media screen and (max-width: $screenSmallResolution) {
+    .quality__description {
+      p {
+        font-size: 18px;
+        line-height: 26px;
+      }
+    }
+  }
+}

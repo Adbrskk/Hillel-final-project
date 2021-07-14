@@ -1,0 +1,22 @@
+.slider-pagination {
+  display: flex;
+  justify-content: center;
+
+  .slider-pagination-item {
+    display: block;
+    width: 16px;
+    height: 16px;
+    background: $colorBlue;
+    opacity: 0.2;
+    border-radius: 50%;
+
+    &:not(:first-child) {
+      margin-left: 14px;
+    }
+
+    &.active,
+    &:hover {
+      opacity: 1;
+    }
+  }
+}

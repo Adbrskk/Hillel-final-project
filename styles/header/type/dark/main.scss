@@ -1,0 +1,42 @@
+&.header--dark {
+  .header__contacts {
+    color: $colorGrey3;
+
+    svg {
+      path {
+        fill: $colorGrey3;
+      }
+    }
+  }
+
+  .language {
+    display: flex;
+    margin-right: 20px;
+
+    a {
+      color: $colorGrey3;
+
+      &.active {
+        background: $colorCrimson;
+        color: $colorWhite;
+      }
+
+      &:hover:not(.active) {
+        background: $colorGrey4;
+        color: $colorGrey3;
+      }
+    }
+  }
+
+  .header__menu {
+    a {
+      color: $colorBlue;
+    }
+  }
+
+  .hamburger {
+    span {
+      background: $colorDarkPurple;
+    }
+  }
+}

@@ -1,0 +1,46 @@
+.team {
+  padding: 162px 0;
+  background: url("../../images/about-page/team/background--desktop.jpg") no-repeat center / cover;
+
+  .team__title {
+    //font-family: TT Norms;
+    font-size: 96px;
+    line-height: 113px;
+    text-align: center;
+    letter-spacing: 63px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    opacity: 0.8;
+    text-shadow: 0 15px 30px rgba(40, 40, 86, 0.8);
+  }
+}
+
+.team {
+  @media screen and (max-width: $screenLargeResolution) {
+    padding: 100px 0;
+    background-size: 120%;
+
+    .team__title {
+      font-size: 66px;
+      letter-spacing: 48px;
+    }
+  }
+
+  @media screen and (max-width: $screenMediumResolution) {
+    .team__title {
+      font-size: 48px;
+      letter-spacing: 36px;
+    }
+  }
+
+  @media screen and (max-width: $screenSmallResolution) {
+    padding: 104px 0;
+    background: url("../../images/about-page/team/background--mobile.jpg") no-repeat center / 100%;
+
+    .team__title {
+      font-size: 36px;
+      letter-spacing: 20px;
+      line-height: 40px;
+    }
+  }
+}

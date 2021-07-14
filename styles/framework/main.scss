@@ -1,0 +1,34 @@
+@import "variables";
+@import "mixins";
+@import "containers";
+@import "buttons";
+@import "fonts";
+
+body {
+  font-family: TTNorms, sans-serif;
+}
+
+.section {
+  .section__title {
+    @include textGradientDefault();
+    font-size: 42px;
+    line-height: 50px;
+    font-weight: 900;
+  }
+
+  @media screen and (max-width: $screenSmallResolution) {
+    .section__title {
+      font-size: 32px;
+      line-height: 37.77px;
+    }
+  }
+}
+
+.circle {
+  display: block;
+  width: 6px;
+  height: 6px;
+  background: $colorGrey3;
+  border-radius: 50%;
+  margin: 0 10px;
+}

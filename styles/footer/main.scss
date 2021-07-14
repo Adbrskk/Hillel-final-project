@@ -1,0 +1,97 @@
+@import "../framework/mixins";
+@import "../framework/variables";
+
+
+.footer {
+  background: $colorGrey2;
+  border-top: 4px solid $colorGrey;
+  padding: 30px 0 40px 0;
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  p {
+    font-size: 16px;
+    line-height: 19px;
+    color: $colorDarkPurple;
+  }
+
+  .address,
+  .tel {
+    display: flex;
+    align-items: center;
+  }
+
+  .address {
+    margin-bottom: 22px;
+
+    .to-map {
+      font-weight: bold;
+      font-size: 12px;
+      line-height: 14px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: $colorBlue;
+    }
+  }
+
+  .tel {
+    .phone-number {
+      font-weight: bold;
+    }
+
+    .e-mail {
+      font-weight: bold;
+      font-size: 16px;
+      line-height: 19px;
+      color: $colorBlue;
+    }
+  }
+
+  .copyright {
+    font-size: 16px;
+    line-height: 19px;
+    color: $colorGrey3;
+  }
+}
+
+.footer {
+  @media screen and (max-width: $screenMediumResolution) {
+    padding: 20px 0 120px 0;
+    align-items: center;
+    justify-content: center;
+
+    .container {
+      display: block;
+      align-items: center;
+    }
+
+    .contacts,
+    .copyright {
+      text-align: center;
+    }
+
+    .address,
+    .tel {
+      display: block;
+      align-items: center;
+    }
+
+    .to-map {
+      display: block;
+      margin-top: 10px;
+    }
+
+    .circle {
+      display: none;
+    }
+
+    .facebook,
+    .e-mail {
+      display: block;
+      margin: 20px 0;
+    }
+  }
+}
